@@ -1,0 +1,134 @@
+.background{
+    background-image: url(images/26786.png);
+    background-size: auto;
+  }
+  .container {
+    padding: 25px;
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr .2fr 1.5fr .5fr;
+    grid-template-areas:
+      "header header header header"
+      "nav nav nav nav"
+      "sec sec secs secs"
+      "footer footer footer footer";
+    grid-gap: 0.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    position: absolute;
+    text-align: center;
+    font-family: Book Antiqua;
+  }
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0d2535;
+    height: 50px;
+  }
+  li{
+    float: left;
+    border-right: 1px solid #bbb;
+  }
+  li:last-child {
+    border-right: none;
+  }
+  
+  li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover{
+    background-color: #111314;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px #00ffc8;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 6px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #e2d1d1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  h1 {
+    color: white;
+    text-shadow: 0px 8px 16px 0px #000000;
+  }
+  nav{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid;
+    grid-area:nav;
+    box-shadow: 0px 8px 16px 0px #00ffc8;
+  }
+  .dropdown{
+    float: right;
+  }
+
+  header {
+    
+    background: none;
+    grid-area: header;
+    color: #111;
+    font-size: 20px;
+  }
+  #sec {
+    color: aliceblue;
+    background: rgb(109,151,245);
+background: linear-gradient(90deg, rgba(109,151,245,0) 67%, rgba(63,96,240,0) 84%);
+    grid-area: sec;
+    box-shadow: 0px 8px 16px 0px #00ffc8;
+  }
+  
+  #secs {
+    color: aliceblue;
+    background: rgb(109,151,245);
+background: linear-gradient(90deg, rgba(109,151,245,0) 67%, rgba(63,96,240,0) 84%);
+    grid-area: secs;
+    box-shadow: 0px 8px 16px 0px #00ffc8;
+  }
+  .footer {
+    background: none;
+    grid-area: footer;
+    color: #00ffc8;
+    font-size: 30px
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+    width: auto;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr .3fr 2fr 2fr 0.4fr;
+      grid-template-areas:
+        "header"
+        "nav"
+        "sec"
+        "secs"
+        "footer";
+    }
+  }
